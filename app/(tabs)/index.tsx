@@ -1,5 +1,5 @@
 import { api } from "@/convex/_generated/api";
-import useTheme from "@/hooks/useTheme";
+import useTheme, { ColorScheme } from "@/hooks/useTheme";
 import { useMutation, useQuery } from "convex/react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -8,7 +8,9 @@ export default function Index() {
   const addTodos = useMutation(api.todos.addTodo);
   const clearTodos = useMutation(api.todos.clearAllTodos);
 
-  const { toggleDarkMode } = useTheme();
+  const { toggleDarkMode, colors } = useTheme();
+
+  const styles = createStyles(colors);
   return (
     <View style={styles.container}>
       {todos?.map(({ _id, text }) => (
@@ -29,14 +31,17 @@ export default function Index() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+const createStyles = (colors: ColorScheme) => {
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: colors.bg,
+    },
 
-  content: {
-    fontSize: 25,
-  },
-});
+    content: {
+      fontSize: 25,
+    },
+  });
+};
