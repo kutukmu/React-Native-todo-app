@@ -1,5 +1,6 @@
 import { createHomeStyles } from "@/assets/styles/home.styles";
 import Header from "@/components/header";
+import TodoInput from "@/components/todoInput";
 import { api } from "@/convex/_generated/api";
 import useTheme from "@/hooks/useTheme";
 import { useMutation, useQuery } from "convex/react";
@@ -23,11 +24,12 @@ export default function Index() {
     >
       <StatusBar barStyle={colors.statusBarStyle} />
       <SafeAreaView style={homeStyles.safeArea}>
+        <Header />
+        <TodoInput />
+
         {todos?.map(({ _id, text }) => (
           <Text key={_id}>{text}</Text>
         ))}
-
-        <Header />
         <TouchableOpacity onPress={toggleDarkMode}>
           <Text>Toggle</Text>
         </TouchableOpacity>
