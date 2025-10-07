@@ -229,11 +229,10 @@ export const createSettingsStyles = (colors: ColorScheme) => {
       alignItems: "center",
       justifyContent: "space-between",
       borderRadius: 15,
-      gap: 20,
       marginBottom: 15,
     },
     settingText: {
-      fontSize: 15,
+      fontSize: 20,
       color: "#fff",
     },
     settingLeft: {
@@ -242,6 +241,34 @@ export const createSettingsStyles = (colors: ColorScheme) => {
       borderRadius: 15,
       gap: 20,
       marginBottom: 15,
+    },
+    actionIcon: {
+      width: 36,
+      height: 36,
+      borderRadius: 8,
+      justifyContent: "center",
+      alignItems: "center",
+      marginRight: 16,
+    },
+    actionLeft: {
+      flexDirection: "row",
+      alignItems: "center",
+      flex: 1,
+    },
+    actionTextDanger: {
+      fontSize: 17,
+      fontWeight: "600",
+      color: colors.danger,
+    },
+    swtichbutton: {
+      marginTop: 5,
+    },
+    sectionTitleDanger: {
+      fontSize: 20,
+      fontWeight: "700",
+      marginBottom: 20,
+      letterSpacing: -0.5,
+      color: colors.danger,
     },
     editInput: {
       borderWidth: 2,

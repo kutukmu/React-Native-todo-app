@@ -28,6 +28,7 @@ const Preferences = () => {
           <Text style={settingsStyle.settingText}>Dark Mode</Text>
         </View>
         <Switch
+          style={settingsStyle.swtichbutton}
           value={isDarkMode}
           onValueChange={toggleDarkMode}
           thumbColor={"#fff"}
