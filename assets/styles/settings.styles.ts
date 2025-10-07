@@ -209,11 +209,39 @@ export const createSettingsStyles = (colors: ColorScheme) => {
     },
     statNumber: {
       fontSize: 35,
-      color: "#fff",
+      color: colors.text,
       fontWeight: "bold",
     },
     statLabel: {
       color: colors.textMuted,
+    },
+    scrollView: {
+      flex: 1,
+    },
+    settingIcon: {
+      padding: 15,
+      borderRadius: 13,
+      fontSize: 15,
+    },
+
+    settingItem: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      borderRadius: 15,
+      gap: 20,
+      marginBottom: 15,
+    },
+    settingText: {
+      fontSize: 15,
+      color: "#fff",
+    },
+    settingLeft: {
+      flexDirection: "row",
+      alignItems: "center",
+      borderRadius: 15,
+      gap: 20,
+      marginBottom: 15,
     },
     editInput: {
       borderWidth: 2,
