@@ -189,10 +189,16 @@ export const createSettingsStyles = (colors: ColorScheme) => {
       fontSize: 22,
       fontWeight: "700",
       letterSpacing: -1,
-      marginBottom: 4,
+      marginBottom: 14,
       color: colors.text,
     },
-
+    statCard: {
+      flexDirection: "row",
+      alignItems: "center",
+      padding: 24,
+      borderRadius: 15,
+      borderLeftWidth: 2,
+    },
     editInput: {
       borderWidth: 2,
       borderRadius: 16,

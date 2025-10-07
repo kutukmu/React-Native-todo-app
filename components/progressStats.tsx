@@ -22,6 +22,10 @@ const ProgressStats = () => {
       style={settingsStyles.section}
     >
       <Text style={settingsStyles.sectionTitle}>Progress Stats</Text>
+      <LinearGradient
+        colors={colors.gradients.background}
+        style={[settingsStyles.statCard, { borderLeftColor: colors.primary }]}
+      ></LinearGradient>
     </LinearGradient>
   );
 };
