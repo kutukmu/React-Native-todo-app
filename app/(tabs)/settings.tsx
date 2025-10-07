@@ -1,4 +1,5 @@
 import { createSettingsStyles } from "@/assets/styles/settings.styles";
+import ProgressStats from "@/components/progressStats";
 import useTheme from "@/hooks/useTheme";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
@@ -35,9 +36,11 @@ const settings = () => {
         </View>
 
         <ScrollView
-          style={settingsStyles.scrollView}
           contentContainerStyle={settingsStyles.container}
-        ></ScrollView>
+          showsHorizontalScrollIndicator={false}
+        >
+          <ProgressStats />
+        </ScrollView>
       </SafeAreaView>
     </LinearGradient>
   );

@@ -48,6 +48,7 @@ export const createSettingsStyles = (colors: ColorScheme) => {
       marginBottom: 4,
       color: colors.text,
     },
+
     subtitle: {
       fontSize: 17,
       fontWeight: "500",
@@ -178,6 +179,20 @@ export const createSettingsStyles = (colors: ColorScheme) => {
     editContainer: {
       flex: 1,
     },
+    section: {
+      borderRadius: 16,
+      paddingHorizontal: 16,
+      paddingVertical: 16,
+      margin: 15,
+    },
+    sectionTitle: {
+      fontSize: 22,
+      fontWeight: "700",
+      letterSpacing: -1,
+      marginBottom: 4,
+      color: colors.text,
+    },
+
     editInput: {
       borderWidth: 2,
       borderRadius: 16,
