@@ -1,10 +1,11 @@
 import { createSettingsStyles } from "@/assets/styles/settings.styles";
 import { api } from "@/convex/_generated/api";
 import useTheme from "@/hooks/useTheme";
+import { Ionicons } from "@expo/vector-icons";
 import { useQuery } from "convex/react";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
 const ProgressStats = () => {
   const { colors } = useTheme();
@@ -25,7 +26,21 @@ const ProgressStats = () => {
       <LinearGradient
         colors={colors.gradients.background}
         style={[settingsStyles.statCard, { borderLeftColor: colors.primary }]}
-      ></LinearGradient>
+      >
+        <View style={settingsStyles.statIconContainer}>
+          <LinearGradient
+            colors={colors.gradients.primary}
+            style={settingsStyles.statIcon}
+          >
+            <Ionicons name="list" size={20} color="#fff" />
+          </LinearGradient>
+        </View>
+
+        <View>
+          <Text style={settingsStyles.statNumber}>{totalTodos}</Text>
+          <Text style={settingsStyles.statLabel}>Total Todos</Text>
+        </View>
+      </LinearGradient>
     </LinearGradient>
   );
 };

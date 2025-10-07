@@ -198,6 +198,21 @@ export const createSettingsStyles = (colors: ColorScheme) => {
       padding: 24,
       borderRadius: 15,
       borderLeftWidth: 2,
+      gap: 20,
+    },
+    statIconContainer: {},
+    statIcon: {
+      padding: 15,
+      borderRadius: 100,
+      fontSize: 15,
+    },
+    statNumber: {
+      fontSize: 35,
+      color: "#fff",
+      fontWeight: "bold",
+    },
+    statLabel: {
+      color: colors.textMuted,
     },
     editInput: {
       borderWidth: 2,
